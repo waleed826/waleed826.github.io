@@ -5,19 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Quotes With Vibe</title>
     <style>
+      :root {
+        --bg: #0f1419;
+        --text: #f4f1ea;
+        --muted: #a8b0b8;
+        --accent: #e8c07d;
+      }
+      * { box-sizing: border-box; }
       body {
-        font-family: system-ui, sans-serif;
-        max-width: 40rem;
-        margin: 3rem auto;
-        padding: 0 1rem;
-        line-height: 1.5;
-        color: #1a1a1a;
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 2rem 1.25rem;
+        font-family: "Segoe UI", Georgia, serif;
+        color: var(--text);
+        background:
+          radial-gradient(ellipse at top, #1c2733 0%, var(--bg) 55%),
+          var(--bg);
+      }
+      main {
+        max-width: 28rem;
+        text-align: center;
+      }
+      h1 {
+        margin: 0 0 0.75rem;
+        font-size: clamp(2rem, 6vw, 2.75rem);
+        font-weight: 600;
+        letter-spacing: -0.02em;
+      }
+      p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 1.05rem;
+        line-height: 1.6;
+      }
+      .accent {
+        display: inline-block;
+        margin-top: 1.5rem;
+        color: var(--accent);
+        font-size: 0.95rem;
       }
     </style>
   </head>
   <body>
-    <h1>Quotes With Vibe</h1>
-    <p>Official developer page for the Quotes With Vibe mobile app.</p>
-    <p><a href="./app-ads.txt">app-ads.txt</a></p>
+    <main>
+      <h1>Quotes With Vibe</h1>
+      <p>Daily quotes with mood, style, and share-ready vibes for Android.</p>
+      <span class="accent">Available on Google Play</span>
+    </main>
   </body>
 </html>
